@@ -34,6 +34,10 @@ const HeroContent = styled.div`
     gap: ${spacing['2xl']};
     text-align: center;
   }
+
+  @media (max-width: 480px) {
+    gap: ${spacing.xl};
+  }
 `;
 
 const HeroText = styled.div`
@@ -92,9 +96,20 @@ const Actions = styled.div`
   display: flex;
   gap: ${spacing.md};
   flex-wrap: wrap;
+  contain: layout;
 
   @media (max-width: 968px) {
     justify-content: center;
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    gap: ${spacing.sm};
+    
+    button, a {
+      width: 100%;
+      justify-content: center;
+    }
   }
 `;
 
@@ -113,10 +128,16 @@ const AvatarWrapper = styled.div`
   position: relative;
   width: 280px;
   height: 280px;
+  contain: layout;
 
   @media (max-width: 768px) {
     width: 200px;
     height: 200px;
+  }
+
+  @media (max-width: 480px) {
+    width: 160px;
+    height: 160px;
   }
 `;
 
@@ -190,6 +211,10 @@ const ScrollIndicator = styled.div`
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const ScrollIcon = styled.div`

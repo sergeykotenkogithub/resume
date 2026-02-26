@@ -123,6 +123,7 @@ export const GlobalStyles = createGlobalStyle`
     color: ${colors.text};
     ${typography.body}
     line-height: 1.6;
+    overflow-x: hidden;
   }
 
   a {

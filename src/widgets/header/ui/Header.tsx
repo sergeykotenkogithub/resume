@@ -106,6 +106,8 @@ const MobileMenuButton = styled.button`
   background: ${colors.backgroundTertiary};
   color: ${colors.text};
   border: 1px solid ${colors.border};
+  cursor: pointer;
+  z-index: 1001;
 
   @media (max-width: 768px) {
     display: flex;
@@ -113,14 +115,17 @@ const MobileMenuButton = styled.button`
 `;
 
 const MobileMenu = styled.div`
-  position: absolute;
-  top: 100%;
+  position: fixed;
+  top: 70px;
   left: 0;
   right: 0;
   background: ${colors.background};
   padding: ${spacing.lg};
   border-bottom: 1px solid ${colors.border};
   box-shadow: ${shadows.lg};
+  z-index: 999;
+  max-height: calc(100vh - 70px);
+  overflow-y: auto;
 `;
 
 const MobileNavLink = styled.a`
@@ -146,6 +151,7 @@ export function Header({ candidate }: HeaderProps) {
 
   const navLinks = [
     { href: '#about', label: 'Обо мне' },
+    { href: '#achievements', label: 'Достижения' },
     { href: '#experience', label: 'Опыт' },
     { href: '#skills', label: 'Навыки' },
     { href: '#projects', label: 'Проекты' },

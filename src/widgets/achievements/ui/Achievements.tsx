@@ -117,7 +117,7 @@ export function Achievements() {
   ];
 
   return (
-    <AchievementsSection>
+    <AchievementsSection id="achievements">
       <Container>
         <SectionHeader>
           <SectionTitle>Что я приносу команде</SectionTitle>
