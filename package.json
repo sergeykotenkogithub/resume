@@ -1,0 +1,26 @@
+{
+  "name": "resume-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@styled-icons/feather": "^10.47.0",
+    "classnames": "^2.5.1",
+    "framer-motion": "^12.34.3",
+    "next": "^15.2.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "styled-components": "^6.1.15"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.9",
+    "@types/react": "^19.0.10",
+    "babel-plugin-styled-components": "^2.1.4",
+    "typescript": "^5.8.2"
+  }
+}
