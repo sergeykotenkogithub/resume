@@ -8,6 +8,7 @@ import { Mail } from '@styled-icons/feather/Mail';
 import { Menu } from '@styled-icons/feather/Menu';
 import { X } from '@styled-icons/feather/X';
 import { Send } from '@styled-icons/feather/Send';
+import { Phone } from '@styled-icons/feather/Phone';
 import { useState } from 'react';
 import { Candidate } from '@/entities/candidate';
 
@@ -189,6 +190,14 @@ export function Header({ candidate }: HeaderProps) {
               >
                 <Mail />
               </IconButton>
+              {candidate.contact.phone && (
+                <IconButton
+                  href={`tel:${candidate.contact.phone}`}
+                  aria-label="Phone"
+                >
+                  <Phone />
+                </IconButton>
+              )}
               <MobileMenuButton onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
                 {isMobileMenuOpen ? <X /> : <Menu />}
               </MobileMenuButton>
