@@ -131,15 +131,26 @@ const AvatarCircle = styled.div`
   font-size: 6rem;
   font-weight: 800;
   color: ${colors.white};
-  box-shadow: 
+  box-shadow:
     0 0 80px rgba(129, 140, 248, 0.5),
     0 0 40px rgba(99, 102, 241, 0.3);
   position: relative;
   z-index: 2;
+  overflow: hidden;
 
   @media (max-width: 768px) {
     font-size: 4rem;
   }
+`;
+
+const AvatarImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 `;
 
 const FloatingBadge = styled.div`
@@ -210,11 +221,6 @@ type HeroProps = {
 };
 
 export function Hero({ candidate }: HeroProps) {
-  const initials = candidate.name
-    .split(' ')
-    .map((n) => n[0])
-    .join('');
-
   return (
     <HeroSection>
       <Container>
@@ -268,7 +274,7 @@ export function Hero({ candidate }: HeroProps) {
           <HeroImage>
             <AvatarWrapper>
               <AvatarCircle>
-                {initials}
+                <AvatarImage src="/avatar.jpeg" alt={candidate.name} />
               </AvatarCircle>
               <FloatingBadge>
                 🚀 React • Vue • Next.js • TypeScript
