@@ -71,7 +71,7 @@ export const candidateData: Candidate = {
       id: 'proj-1',
       title: 'Workout App',
       description:
-        'Приложение для тренировок с возможностью добавлять и завершать упражнения. Отслеживание результатов: количество тренировок, минут и килограммов.',
+        'Fullstack приложение для тренировок: отслеживание прогресса, статистика, личный кабинет. Реализована авторизация, CRUD операций, работа с MongoDB.',
       technologies: ['React', 'React Query', 'Axios', 'Node.js', 'Express', 'MongoDB', 'Mongoose'],
       link: 'https://github.com/sergeykotenkogithub/workout-app',
     },
@@ -79,7 +79,7 @@ export const candidateData: Candidate = {
       id: 'proj-2',
       title: 'Travel App',
       description:
-        'Приложение для путешествий с удобным поиском и планированием поездок.',
+        'Приложение для планирования путешествий с интеграцией Sanity CMS. Поиск, фильтрация, динамические маршруты.',
       technologies: ['Next.js', 'TypeScript', 'Sanity', 'React Toastify', 'React Icons'],
       link: 'https://github.com/sergeykotenkogithub/travel-app',
     },
@@ -87,7 +87,7 @@ export const candidateData: Candidate = {
       id: 'proj-3',
       title: 'Power Movie',
       description:
-        'Онлайн-кинотеатр с возможностью добавлять, редактировать и удалять фильмы. Админ-панель, избранное, жанры.',
+        'Онлайн-кинотеатр: каталог фильмов, поиск, фильтрация по жанрам, избранное, админ-панель. Реализована полная CRUD логика.',
       technologies: ['TypeScript', 'Next.js', 'Redux', 'React Query', 'Axios', 'React Select'],
       link: 'https://github.com/sergeykotenkogithub/power-movie',
     },
@@ -95,7 +95,7 @@ export const candidateData: Candidate = {
       id: 'proj-4',
       title: 'Shop Watch',
       description:
-        'Интернет-магазин часов с корзиной, управлением товарами и плавной прокруткой к секциям.',
+        'Интернет-магазин с корзиной, фильтрацией товаров, анимациями. Реализовано состояние через Redux Toolkit и кэширование через RTK Query.',
       technologies: ['React', 'TypeScript', 'RTK Query', 'Redux Toolkit'],
       link: 'https://github.com/sergeykotenkogithub/shop-watch',
     },
@@ -103,7 +103,7 @@ export const candidateData: Candidate = {
       id: 'proj-5',
       title: 'Info App',
       description:
-        'Приложение для информации о технологиях на разных языках. Настройка проекта с нуля: Webpack, ESLint, Prettier, Stylelint, Storybook. Архитектура FSD, тестирование Jest.',
+        'Многоязычное приложение с архитектурой FSD. Настроено с нуля: Webpack, ESLint, Prettier, Stylelint, Storybook, Jest. i18n локализация.',
       technologies: ['React', 'TypeScript', 'Webpack', 'Jest', 'Storybook', 'i18next', 'ESLint'],
       link: 'https://github.com/sergeykotenkogithub/info-app',
     },
@@ -111,7 +111,7 @@ export const candidateData: Candidate = {
       id: 'proj-6',
       title: 'Internet Shop (Vanilla JS)',
       description:
-        'Интернет-магазин на чистом JavaScript без использования фреймворков.',
+        'Интернет-магазин на чистом JavaScript. Демонстрация глубокого понимания DOM, событий, работы с localStorage без фреймворков.',
       technologies: ['HTML', 'JavaScript', 'CSS'],
       link: 'https://github.com/sergeykotenkogithub/withoutframework',
     },
