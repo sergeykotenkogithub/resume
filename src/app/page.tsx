@@ -45,7 +45,7 @@ export default function Home() {
           github={candidateData.contact.github}
           telegram={candidateData.contact.telegram || 'https://t.me/sergey_kot_web'}
           phone={candidateData.contact.phone || '+79384005562'}
-          location={candidateData.contact.location || 'Готов к удалённой работе и переезду'}
+          location={candidateData.contact.location || 'Сочи, Россия • Открыт к удалённой работе'}
         />
       </main>
       <Footer

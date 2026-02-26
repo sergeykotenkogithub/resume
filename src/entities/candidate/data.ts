@@ -121,6 +121,6 @@ export const candidateData: Candidate = {
     github: 'https://github.com/sergeykotenkogithub/',
     telegram: 'https://t.me/sergey_kot_web',
     phone: '+7 938 400-55-62',
-    location: 'Готов к удалённой работе и переезду',
+    location: 'Сочи, Россия • Открыт к удалённой работе',
   },
 };
