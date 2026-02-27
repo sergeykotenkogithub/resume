@@ -174,6 +174,7 @@ const AvatarImage = styled.img`
   left: 0;
   z-index: 1;
   transform: rotate(-5deg);
+  content-visibility: auto;
 `;
 
 const FloatingBadge = styled.div`
@@ -301,7 +302,7 @@ export function Hero({ candidate }: HeroProps) {
           <HeroImage>
             <AvatarWrapper>
               <AvatarCircle>
-                <AvatarImage src="/avatar.jpeg" alt={candidate.name} />
+                <AvatarImage src="/avatar.jpeg" alt={candidate.name} loading="eager" decoding="sync" />
               </AvatarCircle>
               <FloatingBadge>
                 🚀 React • Vue • Next.js • TypeScript

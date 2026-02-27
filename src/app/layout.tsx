@@ -24,6 +24,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru" suppressHydrationWarning>
+      <head>
+        <link
+          rel="preload"
+          href="/avatar.jpeg"
+          as="image"
+          type="image/jpeg"
+        />
+      </head>
       <body suppressHydrationWarning>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
