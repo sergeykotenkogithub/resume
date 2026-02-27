@@ -160,9 +160,12 @@ const AvatarCircle = styled.div`
   }
 `;
 
-const AvatarImage = styled.img`
+const AvatarImage = styled.div<{ $src: string }>`
   width: 100%;
   height: 100%;
+  background-image: url(${(props) => props.$src});
+  background-size: cover;
+  background-position: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -297,11 +300,7 @@ export function Hero({ candidate }: HeroProps) {
           <HeroImage>
             <AvatarWrapper>
               <AvatarCircle>
-                <AvatarImage
-                  src="/avatar.jpeg"
-                  alt={candidate.name}
-                  style={{ objectFit: 'cover', objectPosition: 'center' }}
-                />
+                <AvatarImage $src="/avatar.jpeg" />
               </AvatarCircle>
               <FloatingBadge>
                 🚀 React • Vue • Next.js • TypeScript
