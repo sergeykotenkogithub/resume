@@ -1,12 +1,21 @@
 'use client';
 
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Container, Section, Button } from '@/shared/ui';
 import { colors, spacing, typography, borderRadius } from '@/shared/styles/global';
 import { Candidate } from '@/entities/candidate';
 import { Github } from '@styled-icons/feather/Github';
 import { Send } from '@styled-icons/feather/Send';
 import { ArrowDown } from '@styled-icons/feather/ArrowDown';
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 const HeroSection = styled(Section)`
   min-height: 100vh;
@@ -169,6 +178,8 @@ const AvatarImage = styled.div<{ $src: string }>`
   top: 0;
   left: 0;
   display: block;
+  background-color: #667eea;
+  animation: ${fadeIn} 0.2s ease-out;
 `;
 
 const FloatingBadge = styled.div`
