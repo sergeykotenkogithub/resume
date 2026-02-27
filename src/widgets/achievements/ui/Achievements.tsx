@@ -120,8 +120,8 @@ export function Achievements() {
     <AchievementsSection id="achievements">
       <Container>
         <SectionHeader>
-          <SectionTitle>Что я приносу команде</SectionTitle>
-          <SectionSubtitle>Не только код, но и реальную пользу</SectionSubtitle>
+          <SectionTitle>Что я приношу команде</SectionTitle>
+          <SectionSubtitle>Ценность для команды и продукта</SectionSubtitle>
         </SectionHeader>
 
         <AchievementsGrid>

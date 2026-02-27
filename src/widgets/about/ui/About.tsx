@@ -116,7 +116,7 @@ export function About() {
     {
       icon: User,
       title: 'Опыт работы',
-      text: '5+ лет в коммерческой разработке. Коммерческий опыт + собственные проекты',
+      text: '5+ лет в коммерческой разработке. Коммерческий опыт и собственные проекты',
     },
     {
       icon: Briefcase,
@@ -140,7 +140,7 @@ export function About() {
       <Container>
         <SectionHeader>
           <SectionTitle>Обо мне</SectionTitle>
-          <SectionSubtitle>Краткая информация о моей профессиональной деятельности</SectionSubtitle>
+          <SectionSubtitle>Информация о моей профессиональной деятельности</SectionSubtitle>
         </SectionHeader>
 
         <AboutGrid>
@@ -167,7 +167,7 @@ export function About() {
             Frontend-разработчик с опытом более 5 лет. Специализируюсь на создании современных
             и производительных интерфейсов с использованием React, Vue, Next.js и TypeScript.
             <br /><br />
-            <strong>Ключевые навыки:</strong> Построение архитектуры по FSD, настройка Redux
+            <strong>Ключевые навыки:</strong> построение архитектуры по FSD, настройка Redux
             и TypeScript для оптимизации командной работы, создание переиспользуемых компонентов,
             модульное тестирование (Jest), интеграция внешних API, работа по Agile/Scrum,
             проведение код-ревью.

@@ -176,7 +176,7 @@ export function ExperienceWidget({ experience }: ExperienceWidgetProps) {
       <Container>
         <SectionHeader>
           <SectionTitle>Опыт работы</SectionTitle>
-          <SectionSubtitle>Мой профессиональный путь</SectionSubtitle>
+          <SectionSubtitle>Профессиональный рост и достижения</SectionSubtitle>
         </SectionHeader>
 
         <Timeline>

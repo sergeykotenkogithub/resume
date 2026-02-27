@@ -123,7 +123,7 @@ export function SkillsWidget({ skills }: SkillsWidgetProps) {
       <Container>
         <SectionHeader>
           <SectionTitle>Навыки</SectionTitle>
-          <SectionSubtitle>Технологии и инструменты, которыми я владею</SectionSubtitle>
+          <SectionSubtitle>Технологии и инструменты</SectionSubtitle>
         </SectionHeader>
 
         <SkillsGrid>

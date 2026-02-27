@@ -108,7 +108,7 @@ export function ProjectsWidget({ projects }: ProjectsWidgetProps) {
       <Container>
         <SectionHeader>
           <SectionTitle>Проекты</SectionTitle>
-          <SectionSubtitle>Избранные работы, которыми я горжусь</SectionSubtitle>
+          <SectionSubtitle>Избранные работы</SectionSubtitle>
         </SectionHeader>
 
         <ProjectsGrid>

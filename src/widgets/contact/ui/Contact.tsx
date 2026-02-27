@@ -129,7 +129,7 @@ export function Contact({ email, github, telegram, phone, location }: ContactPro
       <Container>
         <SectionHeader>
           <SectionTitle>Контакты</SectionTitle>
-          <SectionSubtitle>Свяжитесь со мной любым удобным способом</SectionSubtitle>
+          <SectionSubtitle>Свяжитесь со мной удобным способом</SectionSubtitle>
         </SectionHeader>
 
         <ContactGrid>
@@ -138,7 +138,7 @@ export function Contact({ email, github, telegram, phone, location }: ContactPro
               <Send />
             </IconWrapper>
             <ContactTitle>Telegram</ContactTitle>
-            <ContactText>Быстрый способ связи</ContactText>
+            <ContactText>Оперативная связь</ContactText>
             <ContactButton
               as="a"
               href={telegram}
@@ -156,7 +156,7 @@ export function Contact({ email, github, telegram, phone, location }: ContactPro
               <Mail />
             </IconWrapper>
             <ContactTitle>Email</ContactTitle>
-            <ContactText>Для официальных писем</ContactText>
+            <ContactText>Для официальных запросов</ContactText>
             <ContactButton
               as="a"
               href={`mailto:${email}`}
@@ -190,7 +190,7 @@ export function Contact({ email, github, telegram, phone, location }: ContactPro
               <Phone />
             </IconWrapper>
             <ContactTitle>Телефон</ContactTitle>
-            <ContactText>Звоните с 9 до 21</ContactText>
+            <ContactText>Звоните с 9:00 до 21:00</ContactText>
             <ContactButton
               as="a"
               href={`tel:${phone}`}

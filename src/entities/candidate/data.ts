@@ -71,7 +71,7 @@ export const candidateData: Candidate = {
       id: 'proj-1',
       title: 'Workout App',
       description:
-        'Fullstack приложение для тренировок: отслеживание прогресса, статистика, личный кабинет. Реализована авторизация, CRUD операций, работа с MongoDB.',
+        'Fullstack-приложение для тренировок: отслеживание прогресса, статистика, личный кабинет. Реализованы авторизация, CRUD-операции, работа с MongoDB.',
       technologies: ['React', 'React Query', 'Axios', 'Node.js', 'Express', 'MongoDB', 'Mongoose'],
       link: 'https://github.com/sergeykotenkogithub/workout-app',
     },
@@ -87,7 +87,7 @@ export const candidateData: Candidate = {
       id: 'proj-3',
       title: 'Power Movie',
       description:
-        'Онлайн-кинотеатр: каталог фильмов, поиск, фильтрация по жанрам, избранное, админ-панель. Реализована полная CRUD логика.',
+        'Онлайн-кинотеатр: каталог фильмов, поиск, фильтрация по жанрам, избранное, админ-панель. Реализована полная CRUD-логика.',
       technologies: ['TypeScript', 'Next.js', 'Redux', 'React Query', 'Axios', 'React Select'],
       link: 'https://github.com/sergeykotenkogithub/power-movie',
     },
@@ -103,7 +103,7 @@ export const candidateData: Candidate = {
       id: 'proj-5',
       title: 'Info App',
       description:
-        'Многоязычное приложение с архитектурой FSD. Настроено с нуля: Webpack, ESLint, Prettier, Stylelint, Storybook, Jest. i18n локализация.',
+        'Многоязычное приложение с архитектурой FSD. Настроено с нуля: Webpack, ESLint, Prettier, Stylelint, Storybook, Jest. i18n-локализация.',
       technologies: ['React', 'TypeScript', 'Webpack', 'Jest', 'Storybook', 'i18next', 'ESLint'],
       link: 'https://github.com/sergeykotenkogithub/info-app',
     },

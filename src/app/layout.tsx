@@ -3,13 +3,13 @@ import StyledComponentsRegistry from './StyledComponentsRegistry';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Сергей Котенко — Frontend Developer',
-  description: 'Frontend-разработчик с более чем 5-летним опытом. Vue, React, Next.js, TypeScript.',
-  keywords: ['frontend', 'developer', 'vue', 'react', 'next.js', 'typescript', 'resume'],
+  title: 'Сергей Котенко — Frontend-разработчик (React, Vue, TypeScript)',
+  description: 'Frontend-разработчик с опытом более 5 лет. Специализируюсь на React, Vue, Next.js и TypeScript. Создаю современные и производительные веб-приложения.',
+  keywords: ['frontend', 'developer', 'vue', 'react', 'next.js', 'typescript', 'resume', 'frontend-разработчик'],
   authors: [{ name: 'Сергей Котенко' }],
   openGraph: {
-    title: 'Сергей Котенко — Frontend Developer',
-    description: 'Frontend-разработчик с более чем 5-летним опытом. Vue, React, Next.js, TypeScript.',
+    title: 'Сергей Котенко — Frontend-разработчик (React, Vue, TypeScript)',
+    description: 'Frontend-разработчик с опытом более 5 лет. Специализируюсь на React, Vue, Next.js и TypeScript. Создаю современные и производительные веб-приложения.',
     type: 'website',
   },
 };
