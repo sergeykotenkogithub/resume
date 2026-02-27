@@ -1,7 +1,6 @@
 'use client';
 
 import styled from 'styled-components';
-import Image from 'next/image';
 import { Container, Section, Button } from '@/shared/ui';
 import { colors, spacing, typography, borderRadius } from '@/shared/styles/global';
 import { Candidate } from '@/entities/candidate';
@@ -138,13 +137,39 @@ const AvatarWrapper = styled.div`
   }
 `;
 
-const AvatarImage = styled(Image)`
+const AvatarCircle = styled.div`
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: ${colors.gradient.primary};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  font-weight: 800;
+  color: ${colors.white};
+  box-shadow:
+    0 0 80px rgba(129, 140, 248, 0.5),
+    0 0 40px rgba(99, 102, 241, 0.3);
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    font-size: 4rem;
+  }
+`;
+
+const AvatarImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: 50%;
+  z-index: 1;
   transform: rotate(-5deg);
-  background: ${colors.gradient.primary};
 `;
 
 const FloatingBadge = styled.div`
@@ -271,15 +296,9 @@ export function Hero({ candidate }: HeroProps) {
 
           <HeroImage>
             <AvatarWrapper>
-              <AvatarImage
-                src="/avatar.jpeg"
-                alt={candidate.name}
-                fill
-                sizes="280px"
-                priority
-                quality={90}
-                style={{ objectFit: 'cover' }}
-              />
+              <AvatarCircle>
+                <AvatarImage src="/avatar.jpeg" alt={candidate.name} />
+              </AvatarCircle>
               <FloatingBadge>
                 🚀 React • Vue • Next.js • TypeScript
               </FloatingBadge>
