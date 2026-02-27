@@ -1,6 +1,7 @@
 'use client';
 
 import styled, { keyframes } from 'styled-components';
+import NextImage from 'next/image';
 import { Container, Section, Button } from '@/shared/ui';
 import { colors, spacing, typography, borderRadius } from '@/shared/styles/global';
 import { Candidate } from '@/entities/candidate';
@@ -199,21 +200,22 @@ const SkeletonLoader = styled.div`
   border-radius: 50%;
 `;
 
-const AvatarImage = styled.img<{ $loaded: boolean }>`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+const AvatarImage = styled(NextImage)<{ $loaded: boolean }>`
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
+  width: 100%;
+  height: 100%;
   transform: rotate(-5deg);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  background: ${colors.gradient.primary};
   opacity: ${(props) => (props.$loaded ? 1 : 0)};
   transition: opacity 0.3s ease-out;
+  
+  > img {
+    object-fit: cover !important;
+    object-position: center !important;
+  }
 `;
 
 const FloatingBadge = styled.div`
@@ -354,7 +356,16 @@ export function Hero({ candidate }: HeroProps) {
             <AvatarWrapper>
               <AvatarCircle>
                 {!imageLoaded && <SkeletonLoader />}
-                <AvatarImage src="/avatar.jpeg" alt={candidate.name} $loaded={imageLoaded} />
+                <AvatarImage
+                  src="/avatar.jpeg"
+                  alt={candidate.name}
+                  fill
+                  sizes="280px"
+                  priority
+                  quality={85}
+                  $loaded={imageLoaded}
+                  style={{ objectFit: 'cover' }}
+                />
               </AvatarCircle>
               <FloatingBadge>
                 🚀 React • Vue • Next.js • TypeScript
