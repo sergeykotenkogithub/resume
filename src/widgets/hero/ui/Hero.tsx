@@ -13,9 +13,7 @@ const HeroSection = styled(Section)`
   display: flex;
   align-items: center;
   padding-top: ${spacing['4xl']};
-  content-visibility: auto;
-  contain-intrinsic-size: 100vh;
-  background: 
+  background:
     radial-gradient(ellipse at top, rgba(99, 102, 241, 0.2), transparent 60%),
     radial-gradient(ellipse at bottom right, rgba(139, 92, 246, 0.12), transparent 50%),
     linear-gradient(180deg, ${colors.background} 0%, ${colors.backgroundSecondary} 100%);
@@ -96,7 +94,6 @@ const Actions = styled.div`
   display: flex;
   gap: ${spacing.md};
   flex-wrap: wrap;
-  contain: layout;
 
   @media (max-width: 968px) {
     justify-content: center;
@@ -128,7 +125,6 @@ const AvatarWrapper = styled.div`
   position: relative;
   width: 280px;
   height: 280px;
-  contain: layout;
 
   @media (max-width: 768px) {
     width: 200px;
@@ -174,7 +170,6 @@ const AvatarImage = styled.img`
   left: 0;
   z-index: 1;
   transform: rotate(-5deg);
-  content-visibility: auto;
 `;
 
 const FloatingBadge = styled.div`
