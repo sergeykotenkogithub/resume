@@ -153,9 +153,6 @@ const AvatarCircle = styled.div`
     0 0 40px rgba(99, 102, 241, 0.3);
   position: relative;
   overflow: hidden;
-  transform-origin: center;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
 
   @media (max-width: 768px) {
     font-size: 4rem;
@@ -171,10 +168,6 @@ const AvatarImage = styled.img`
   top: 0;
   left: 0;
   display: block;
-  transform: rotate(-5deg);
-  transform-origin: center;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
 `;
 
 const FloatingBadge = styled.div`
@@ -302,7 +295,7 @@ export function Hero({ candidate }: HeroProps) {
           <HeroImage>
             <AvatarWrapper>
               <AvatarCircle>
-                <AvatarImage src="/avatar.jpeg" alt={candidate.name} loading="eager" decoding="sync" />
+                <AvatarImage src="/avatar.jpeg" alt={candidate.name} />
               </AvatarCircle>
               <FloatingBadge>
                 🚀 React • Vue • Next.js • TypeScript
