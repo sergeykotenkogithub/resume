@@ -1,12 +1,31 @@
 'use client';
 
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Container, Section, Button } from '@/shared/ui';
 import { colors, spacing, typography, borderRadius } from '@/shared/styles/global';
 import { Candidate } from '@/entities/candidate';
 import { Github } from '@styled-icons/feather/Github';
 import { Send } from '@styled-icons/feather/Send';
 import { ArrowDown } from '@styled-icons/feather/ArrowDown';
+import { useState, useEffect } from 'react';
+
+const skeleton = keyframes`
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+`;
+
+const pulse = keyframes`
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+`;
 
 const HeroSection = styled(Section)`
   min-height: 100vh;
@@ -160,12 +179,31 @@ const AvatarCircle = styled.div`
   }
 `;
 
-const AvatarImage = styled.div<{ $src: string }>`
+const SkeletonLoader = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(${(props) => props.$src});
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(
+    90deg,
+    #4c51bf 0%,
+    #93c5fd 25%,
+    #4c51bf 50%,
+    #93c5fd 75%,
+    #4c51bf 100%
+  );
+  background-size: 200% 100%;
+  animation: ${skeleton} 1s linear infinite, ${pulse} 1.5s ease-in-out infinite;
+  z-index: 1;
+  border-radius: 50%;
+`;
+
+const AvatarImage = styled.img<{ $loaded: boolean }>`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -173,6 +211,9 @@ const AvatarImage = styled.div<{ $src: string }>`
   transform: rotate(-5deg);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  background: ${colors.gradient.primary};
+  opacity: ${(props) => (props.$loaded ? 1 : 0)};
+  transition: opacity 0.3s ease-out;
 `;
 
 const FloatingBadge = styled.div`
@@ -247,6 +288,18 @@ type HeroProps = {
 };
 
 export function Hero({ candidate }: HeroProps) {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = '/avatar.jpeg';
+    img.onload = () => setImageLoaded(true);
+    // Если изображение уже в кэше
+    if (img.complete) {
+      setImageLoaded(true);
+    }
+  }, []);
+
   return (
     <HeroSection>
       <Container>
@@ -300,7 +353,8 @@ export function Hero({ candidate }: HeroProps) {
           <HeroImage>
             <AvatarWrapper>
               <AvatarCircle>
-                <AvatarImage $src="/avatar.jpeg" />
+                {!imageLoaded && <SkeletonLoader />}
+                <AvatarImage src="/avatar.jpeg" alt={candidate.name} $loaded={imageLoaded} />
               </AvatarCircle>
               <FloatingBadge>
                 🚀 React • Vue • Next.js • TypeScript
