@@ -1,21 +1,12 @@
 'use client';
 
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { Container, Section, Button } from '@/shared/ui';
 import { colors, spacing, typography, borderRadius } from '@/shared/styles/global';
 import { Candidate } from '@/entities/candidate';
 import { Github } from '@styled-icons/feather/Github';
 import { Send } from '@styled-icons/feather/Send';
 import { ArrowDown } from '@styled-icons/feather/ArrowDown';
-
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-`;
 
 const HeroSection = styled(Section)`
   min-height: 100vh;
@@ -161,7 +152,6 @@ const AvatarCircle = styled.div`
     0 0 80px rgba(129, 140, 248, 0.5),
     0 0 40px rgba(99, 102, 241, 0.3);
   position: relative;
-  z-index: 2;
   overflow: hidden;
   transform-origin: center;
   backface-visibility: hidden;
@@ -180,13 +170,11 @@ const AvatarImage = styled.img`
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
+  display: block;
   transform: rotate(-5deg);
   transform-origin: center;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  will-change: transform;
-  animation: ${fadeIn} 0.3s ease-out forwards;
 `;
 
 const FloatingBadge = styled.div`
