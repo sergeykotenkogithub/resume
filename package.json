@@ -21,6 +21,7 @@
     "@types/node": "^22.13.9",
     "@types/react": "^19.0.10",
     "babel-plugin-styled-components": "^2.1.4",
+    "canvas": "^3.2.1",
     "typescript": "^5.8.2"
   }
 }

@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description: 'Frontend-разработчик с опытом более 5 лет. Специализируюсь на React, Vue, Next.js и TypeScript. Создаю современные и производительные веб-приложения.',
   keywords: ['frontend', 'developer', 'vue', 'react', 'next.js', 'typescript', 'resume', 'frontend-разработчик'],
   authors: [{ name: 'Сергей Котенко' }],
+  icons: {
+    icon: '/favicon.svg',
+  },
   openGraph: {
     title: 'Сергей Котенко — Frontend-разработчик (React, Vue, TypeScript)',
     description: 'Frontend-разработчик с опытом более 5 лет. Специализируюсь на React, Vue, Next.js и TypeScript. Создаю современные и производительные веб-приложения.',

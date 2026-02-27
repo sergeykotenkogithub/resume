@@ -151,6 +151,7 @@ export function Header({ candidate }: HeaderProps) {
 
   const navLinks = [
     { href: '#about', label: 'Обо мне' },
+    { href: '#value', label: 'Ценность' },
     { href: '#achievements', label: 'Достижения' },
     { href: '#experience', label: 'Опыт' },
     { href: '#skills', label: 'Навыки' },

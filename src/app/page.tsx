@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import { GlobalStyles } from '@/shared/styles/global';
-import { Header, Hero, About, ExperienceWidget, SkillsWidget, ProjectsWidget, Achievements, Contact, Footer } from '@/widgets';
+import { Header, Hero, About, Value, ExperienceWidget, SkillsWidget, ProjectsWidget, Achievements, Contact, Footer } from '@/widgets';
 import { candidateData } from '@/entities/candidate';
 
 function useSmoothScroll() {
@@ -37,6 +37,7 @@ export default function Home() {
       <main>
         <Hero candidate={candidateData} />
         <About />
+        <Value />
         <Achievements />
         <ExperienceWidget experience={candidateData.experience} />
         <SkillsWidget skills={candidateData.skills} />

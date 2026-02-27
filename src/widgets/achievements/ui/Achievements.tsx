@@ -7,6 +7,7 @@ import { CheckCircle } from '@styled-icons/feather/CheckCircle';
 import { Zap } from '@styled-icons/feather/Zap';
 import { Code } from '@styled-icons/feather/Code';
 import { Users } from '@styled-icons/feather/Users';
+import { ArrowUp } from '@styled-icons/feather/ArrowUp';
 
 const AchievementsSection = styled(Section)`
   background: linear-gradient(180deg, ${colors.backgroundSecondary} 0%, ${colors.background} 100%);
@@ -92,6 +93,35 @@ const AchievementText = styled.p`
   line-height: 1.5;
 `;
 
+const UpButton = styled.a`
+  display: inline-flex;
+  align-items: center;
+  gap: ${spacing.sm};
+  margin-top: ${spacing['2xl']};
+  padding: ${spacing.sm} ${spacing.lg};
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: ${colors.primary};
+  background: ${colors.backgroundTertiary};
+  border: 1px solid ${colors.border};
+  border-radius: ${borderRadius.full};
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  &:hover {
+    background: ${colors.primary};
+    color: ${colors.white};
+    border-color: ${colors.primary};
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(129, 140, 248, 0.4);
+  }
+`;
+
 export function Achievements() {
   const achievements = [
     {
@@ -138,6 +168,13 @@ export function Achievements() {
             );
           })}
         </AchievementsGrid>
+
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <UpButton href="#value">
+            <ArrowUp />
+            К ценности
+          </UpButton>
+        </div>
       </Container>
     </AchievementsSection>
   );
