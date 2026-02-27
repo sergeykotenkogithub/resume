@@ -1,21 +1,13 @@
 'use client';
 
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
+import Image from 'next/image';
 import { Container, Section, Button } from '@/shared/ui';
 import { colors, spacing, typography, borderRadius } from '@/shared/styles/global';
 import { Candidate } from '@/entities/candidate';
 import { Github } from '@styled-icons/feather/Github';
 import { Send } from '@styled-icons/feather/Send';
 import { ArrowDown } from '@styled-icons/feather/ArrowDown';
-
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-`;
 
 const HeroSection = styled(Section)`
   min-height: 100vh;
@@ -146,40 +138,13 @@ const AvatarWrapper = styled.div`
   }
 `;
 
-const AvatarCircle = styled.div`
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: ${colors.gradient.primary};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 6rem;
-  font-weight: 800;
-  color: ${colors.white};
-  box-shadow:
-    0 0 80px rgba(129, 140, 248, 0.5),
-    0 0 40px rgba(99, 102, 241, 0.3);
-  position: relative;
-  overflow: hidden;
-
-  @media (max-width: 768px) {
-    font-size: 4rem;
-  }
-`;
-
-const AvatarImage = styled.div<{ $src: string }>`
-  width: 100%;
-  height: 100%;
-  background-image: url(${(props) => props.$src});
-  background-size: cover;
-  background-position: center;
+const AvatarImage = styled(Image)`
   position: absolute;
   top: 0;
   left: 0;
-  display: block;
-  background-color: #667eea;
-  animation: ${fadeIn} 0.2s ease-out;
+  border-radius: 50%;
+  transform: rotate(-5deg);
+  background: ${colors.gradient.primary};
 `;
 
 const FloatingBadge = styled.div`
@@ -306,9 +271,15 @@ export function Hero({ candidate }: HeroProps) {
 
           <HeroImage>
             <AvatarWrapper>
-              <AvatarCircle>
-                <AvatarImage $src="/avatar.jpeg" />
-              </AvatarCircle>
+              <AvatarImage
+                src="/avatar.jpeg"
+                alt={candidate.name}
+                fill
+                sizes="280px"
+                priority
+                quality={90}
+                style={{ objectFit: 'cover' }}
+              />
               <FloatingBadge>
                 🚀 React • Vue • Next.js • TypeScript
               </FloatingBadge>
