@@ -7,6 +7,7 @@ import { colors, spacing, typography, borderRadius } from '@/shared/styles/globa
 import { Candidate } from '@/entities/candidate';
 import { Github } from '@styled-icons/feather/Github';
 import { Send } from '@styled-icons/feather/Send';
+import { Mail } from '@styled-icons/feather/Mail';
 import { ArrowDown } from '@styled-icons/feather/ArrowDown';
 import { useState, useEffect } from 'react';
 
@@ -336,6 +337,7 @@ export function Hero({ candidate }: HeroProps) {
                 variant="outline"
                 size="lg"
               >
+                <Mail size={20} />
                 sergeykotenko@bk.ru
               </Button>
               <Button
