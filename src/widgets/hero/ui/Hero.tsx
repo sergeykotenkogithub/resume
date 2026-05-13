@@ -370,7 +370,7 @@ export function Hero({ candidate }: HeroProps) {
                 />
               </AvatarCircle>
               <FloatingBadge>
-                🚀 React • Vue • Next.js • TypeScript
+                🚀 React • Vue • Next.js • TypeScript • NodeJs
               </FloatingBadge>
             </AvatarWrapper>
           </HeroImage>
